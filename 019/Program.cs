@@ -10,10 +10,14 @@
 */
 
 Console.WriteLine("Введите пятизначное число");
-string num = Console.ReadLine();
-if (num.Length == 5)
+
+int num = Convert.ToInt32(Console.ReadLine());
+int a = Math.Abs(num);
+string strNum = Convert.ToString(a);
+
+if (strNum.Length == 5)
 {
-    if (num[0] == num[4] & num[1] == num[3])
+    if (strNum[0] == strNum[4] & strNum[1] == strNum[3])
     {
         Console.WriteLine("Ваше число является полиндромом");
     }
